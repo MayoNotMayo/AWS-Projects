@@ -26,7 +26,9 @@ Head to the <kbd>target groups</kbd> tab under load balancers.
 We select the target group that has been created, then click on attributes. 
 We will then click edit, and change the session stickiness to be on. 
 You can leave the values as default, or change them to be minutes instead of 1 day.
+
 !![Screenshot 2024-01-10 162537](https://github.com/MayoNotMayo/AWS-Projects/assets/100898272/eaec1774-2864-4531-9a7f-0ff98c6d98d2)
+
 
 If we go back to the load balancer’s DNS tab and hit refresh several times, we can see that the same EC2 instance, with the same background color and gif will continue to load. 
 
