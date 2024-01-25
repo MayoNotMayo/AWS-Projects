@@ -1,15 +1,15 @@
-#Session Stickiness using an ALB
-#Purpose
+# Session Stickiness using an ALB
+# Purpose
 Demonstrate session stickiness when enabled, and when disabled on an Application Load Balancer’s target group.
 
 Link to the original repository made by Adrian Cantrill: https://github.com/acantril/learn-cantrill-io-labs/tree/master/00-aws-simple-demos/aws-alb-session-stickiness
 
-#Resources
+# Resources
 Template used for resource creation: https://learn-cantrill-labs.s3.amazonaws.com/aws-simple-demos/aws-alb-session-stickiness/ALBSTICKINESS.yaml
 This creates a VPC with 3 public subnets, with an internet gateway attached. The subnets have 2 EC2 instances per subnet, totaling to 6 EC2 instances. They are placed within the target group of an Application Load Balancer which has session stickiness turned off to begin.
 The Load Balancer has a LaunchTemplate which defines how instances should be built within the target group.
 
-#Demo
+# Demo
 We first begin by deploying the template in cloud formation. 
 There was an error that occurred and a rollback was initiated, however redeploying the architecture fixed the issue.
 
