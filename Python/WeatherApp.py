@@ -1,3 +1,4 @@
+#CURRENTLY BROKEN, IN PROGRESS
 """
 Builds a weather notification 
 app using bs4 to pull data out of HTML 
