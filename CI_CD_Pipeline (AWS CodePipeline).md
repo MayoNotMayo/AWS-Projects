@@ -13,6 +13,7 @@ Prerequisites:
 ```
 
 The architecture that I will be deploying:
+
 ![PipelineArch.png](https://github.com/MayoNotMayo/AWS-Projects/blob/main/LabPhotos/PipelineArch.png)
 
 ## Step 1: Setting up a GitHub Repository
@@ -50,6 +51,7 @@ https://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-create-i
 Once finished and deployed the application should be up and running, and to test it we can click the URL link under the Elastic BeanStalk deployment UI. It should display a large green Congratulations message.
 
 Here is our architecture at this current state:
+
 ![HalfwayPipeArch.png](https://github.com/MayoNotMayo/AWS-Projects/blob/main/LabPhotos/HalfwayPipeArch.png)
 
 ## Step 3: Creating a CodeBuild Project
@@ -97,11 +99,14 @@ Under the build stage: Select AWS CodeBuild, then be sure that the region select
 Under the deploy stage: Select `AWS Elastic Beanstalk` from the dropdown. Be careful with the region here. If you can't find your application then chances are you deployed it in a different region. 
 
 Create your pipeline. Below is what mine looks like before we continue:
+
 ![pipeline.png](https://github.com/MayoNotMayo/AWS-Projects/blob/main/LabPhotos/pipeline.png)
 
 ## Review
 We are going to implement a review stage so that we have to manually accept any proposed changes to our code on GitHub. Without approving the changes, our code won't be pushed to our GitHub repository.
+
 ![review.png](https://github.com/MayoNotMayo/AWS-Projects/blob/main/LabPhotos/review.png)
+
 Click `Edit` on our pipeline and select `Add stage`. Name it "Review" to keep it simple and easy to understand.
 
 After you add the stage, press the `Add action group` button, and call the Action name something along the lines of "Manual_Review" 
@@ -113,4 +118,5 @@ Now, to test the manual review with our pipeline, open app.js in a code editor a
 Quickly head over to the AWS tab again and watch as the code moves through the Pipeline. When the option appears, at the review stage press the review button and accepts the changes. Here we would write a comment about the changes made, and then watch as the code gets pushed all the way through to GitHub.
 
 Once finished you should be able to see your new line 5 on GitHub.
+
 ![pipelinereview.png](https://github.com/MayoNotMayo/AWS-Projects/blob/main/LabPhotos/pipelinereview.png)
