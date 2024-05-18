@@ -5,6 +5,6 @@ Challenged myself to make it as short as I could and fix my previous mistake fro
 import re
 
 """Using findall, we can search a string input from the user for vowels. 
-Using the flad IGNORECASE will ignore the case of the letters, whether they are lowercase or uppercase. 
+Using the flag IGNORECASE will ignore the case of the letters, whether they are lowercase or uppercase. 
 len will count the occurrences and then print the output."""
 print(len(re.findall("a|e|i|o|u", input(), flags=re.IGNORECASE)))
